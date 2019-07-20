@@ -18,6 +18,22 @@ export class AppComponent {
 
   constructor(private gameService: GameService, 
     private victoryService: VictoryService) {}
+  
+  get winner(): Player {
+    return this.gameService.winner;
+  }
+
+  get isGameOver(): boolean {
+    return this.gameService.game.isOver;
+  }
+
+  get playerOneScore(): number {
+    return this.gameService.players[0].score;
+  }
+
+  get playerTwoScore(): number {
+    return this.gameService.players[1].score;
+  }
  
   ngOnInit() {
     this.gameService.initGame(true);

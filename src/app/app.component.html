@@ -2,21 +2,20 @@
   <h1 class="title"> {{ title }} </h1>
 
   <div class="container">
-    <app-modal [winner]="gameService.winner" 
+    <app-modal [winner]="winner" 
     (modalAction)="onModalAction($event)" 
     *ngIf="isModalOpen">
     </app-modal>
 
     <app-table [cells]="gameService.cells" 
-    [isGameOver]="gameService.game.isOver"
+    [isGameOver]="isGameOver"
     (tableAction)="onTableAction($event)">
     </app-table>
 
     <app-score-table 
-    [playerOneScore]="gameService.players[0].score" 
-    [playerTwoScore]="gameService.players[1].score"> 
+    [playerOneScore]="playerOneScore" 
+    [playerTwoScore]="playerTwoScore"> 
    </app-score-table>
-
   </div>
 
   <router-outlet></router-outlet>
