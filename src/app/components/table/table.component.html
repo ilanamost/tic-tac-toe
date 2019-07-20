@@ -1,0 +1,16 @@
+<div class="row table-row">
+  <table class="table">
+    <tbody>
+      <tr *ngFor="let row of cells; let i = index">
+        <td
+          class="table-square"
+          *ngFor="let cell of row; let j = index"
+          [class.highlight]="getHighlight(i, j) && !isGameOver"
+          (click)="makeMove(i, j)"
+        >
+          <p class="table-content">{{ cell.sign }}</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,27 @@
+.game-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .title {
+    text-align: center;
+    padding: 20px;
+    text-transform: capitalize;
+    background-color: #ff000021;
+    color: #912626b8;
+  }
+
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+}
+

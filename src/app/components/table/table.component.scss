@@ -1,0 +1,39 @@
+.row {
+  margin: unset !important;
+  &.table-row {
+    align-self: center;
+  }
+
+  .table {
+    margin: unset;
+    table-layout: fixed;
+    width: unset;
+
+    .table-square {
+      border: 1px solid #dee2e6;
+      text-align: center;
+      padding: 45px;
+      display: table-cell;
+      background-color: #92848485;
+      position: relative;
+      cursor: default;
+
+      &.highlight {
+        background-color: #b67088;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #e91e6385;
+        }
+      }
+
+      .table-content {
+        position: absolute;
+        top: 20%;
+        left: 42%;
+        margin: 0;
+        font-size: 30px;
+      }
+    }
+  }
+}
