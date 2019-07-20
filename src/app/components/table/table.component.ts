@@ -25,5 +25,4 @@ export class TableComponent implements OnInit {
     return this.gameService.possibleMoves.filter(
       move => (move.x === row && move.y === col)).length > 0;
   }
-
 }
