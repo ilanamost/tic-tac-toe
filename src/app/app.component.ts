@@ -34,6 +34,10 @@ export class AppComponent {
   get playerTwoScore(): number {
     return this.gameService.players[1].score;
   }
+
+  get cells(): Cell[][] {
+    return this.gameService.cells;
+  }
  
   ngOnInit() {
     this.gameService.initGame(true);

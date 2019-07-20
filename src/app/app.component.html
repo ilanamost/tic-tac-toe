@@ -7,7 +7,7 @@
     *ngIf="isModalOpen">
     </app-modal>
 
-    <app-table [cells]="gameService.cells" 
+    <app-table [cells]="cells" 
     [isGameOver]="isGameOver"
     (tableAction)="onTableAction($event)">
     </app-table>
